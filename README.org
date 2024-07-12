@@ -1,6 +1,6 @@
 This is the public website of hyenatech.
 
-It is also hosted on the public web and available on https:/hyenatech.co.il/.
+It is also hosted on the public web and available on https://hyenatech.co.il/.
 
 Ths website is basically as simple as website can get. It is made of:
    - Static HTML, CSS and JS (~hyenatech.html~)
