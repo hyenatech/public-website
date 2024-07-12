@@ -7,15 +7,16 @@
 	<style>
 	 :root {
 		 /* GRAYS (from Open Color) */
+		 --very-light-gray: #f8f9fa; /* GRAY 0 */
 		 --light-gray: #e9ecef; /* GRAY 2 */
-		 --medium-gray: #ced4da; /* GRAY 4 */
+		 --normal-gray: #ced4da; /* GRAY 4 */
 		 --dark-gray: #495057; /* GRAY 7 */
-		 --very-dark-gray: #212529; /* GRAY 9 */
+		 --very-dark-gray: #white; /* GRAY 9 */
 
 		 /* PRIMARY COLORS: blue shades (from Open Color)  */
    	 	 --very-light-blue: #d0ebff; /* BLUE 1 */
 		 --light-blue: #74C0fc; /* BLUE 3 */
-		 --noraml-blue: #339af0; /* BLUE 5 */
+		 --normal-blue: #339af0; /* BLUE 5 */
 		 --dark-blue: #1c7ed6; /* BLUE 7 */
 		 --very-dark-blue: #1864ab; /* BLUE 9 */
 	 }
@@ -29,29 +30,45 @@
 	 /* Set font */
 	 body {
 		 font-family: "Inter", sans-serif;
-		 background-color: var(--very-dark-gray);
+		 color: var(--very-dark-gray);
+		 background-color: var(--very-light-gray);
 	 }
 
 	 /* Website box */
 	 .website-box {
 		 width: 1000px;
 		 margin: auto;
-		 background-color: var(--normal-blue);
-		 padding: 40px 0px
+		 background-color: var(--very-light-gray);
 	 }
 
 	 /* Navigation bar */
 	 .navbar {
 		 display: flex;
 		 flex-direction: row;
+		 width: 500px;
+		 height: 30px;
+
 		 align-items: center;
-		 justify-content: space-between;
+		 justify-content: space-around;
 		 margin-bottom: 24px;
-		 background-color: green;
+
+		 background-color: var(--very-light-blue);
+		 border-radius: 10px;
 	 }
 	 .navbar a {
-		 color: blue;
+		display: block;
+		font-weight: bold;
 	 }
+
+	 .navbar a:link, .navbar a:visited {
+		color: red;
+	 }
+
+	 .navbar a:hover, .navbar a:active {
+		 color: violet;
+	 }
+
+
 
 	 /* Header */
 	 .header {
@@ -59,10 +76,11 @@
 		 align-items: center;
 		 justify-content: center;
 		 margin-bottom: 32px;
-		 background-color: violet;
+
+		 background-color: var(--very-light-blue);
+		 border-radius: 20px;
 	 }
 	 .logo {
-		 color: red;
 		 font-size: 144px;
 	 }
 
@@ -71,13 +89,18 @@
 		 display: flex;
 		 justify-content: space-between;
 
-		 margin: 48px 32px;
+		 background-color: var(--very-light-blue);
+		 border-radius: 20px;
+		 
 		 box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07)
 	 }
 
 	 .geek-hyena {
 		 width: 320px;
 		 height: 500px;
+
+		 border-top-right-radius: 20px;
+		 border-bottom-right-radius: 20px;
 	 }
 	 /* Sections */
 	 section {
@@ -88,13 +111,16 @@
 		 display: none;
 	 }
 
-	 .contact {
+	 .skills {
 		 display: block;
 	 }
 
 	 /* Text content */
 	 h1 {
+		text-align: center;
 		 font-size: 40px;
+		 font-weight: 700;
+		 letter-spacing: -1px;
 		 margin-bottom: 24px;
 	 }
 
@@ -114,6 +140,14 @@
 	 }
 	 .contact-metadata-and-action-box #sender-information {
 		 flex: 1 0;
+	 }
+
+	 /* Footer */
+	 .copyright-box {
+		margin-top: 20px;
+
+		background-color: var(--very-light-blue);
+		border-radius: 10px;
 	 }
 	</style>
   </head>
@@ -204,6 +238,7 @@
 	  </div>
 	  <footer class="copyright-box">
 		Copyright © 2024 Hyenatech Ltd.
+      </footer>
 	</div>
   </body>
 </html>
