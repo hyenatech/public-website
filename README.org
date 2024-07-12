@@ -1,0 +1,7 @@
+This is the public website of hyenatech.
+
+It is also hosted on the public web and available on https:/www.hyenatech.co.il/.
+
+Ths website is basically as simple as website can get. It is made of:
+   - Static HTML, CSS and JS (~hyenatech.html~)
+   - Photos for the logo, the geek hyena figure and for various programming languages (~logo.png~, ~geek-hyena.png~, ~prog-langs~) 

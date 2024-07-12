@@ -1,0 +1,209 @@
+<html>
+  <head>
+	<title>Hyenatech Ltd.</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gtatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Integ;wght@100..900&display=swap" rel="stylesheet" />
+	<style>
+	 :root {
+		 /* GRAYS (from Open Color) */
+		 --light-gray: #e9ecef; /* GRAY 2 */
+		 --medium-gray: #ced4da; /* GRAY 4 */
+		 --dark-gray: #495057; /* GRAY 7 */
+		 --very-dark-gray: #212529; /* GRAY 9 */
+
+		 /* PRIMARY COLORS: blue shades (from Open Color)  */
+   	 	 --very-light-blue: #d0ebff; /* BLUE 1 */
+		 --light-blue: #74C0fc; /* BLUE 3 */
+		 --noraml-blue: #339af0; /* BLUE 5 */
+		 --dark-blue: #1c7ed6; /* BLUE 7 */
+		 --very-dark-blue: #1864ab; /* BLUE 9 */
+	 }
+
+	 /* Global reset */
+	 * {
+		 margin: 0;
+		 box-sizing: border-box;
+	 }
+
+	 /* Set font */
+	 body {
+		 font-family: "Inter", sans-serif;
+		 background-color: var(--very-dark-gray);
+	 }
+
+	 /* Website box */
+	 .website-box {
+		 width: 1000px;
+		 margin: auto;
+		 background-color: var(--normal-blue);
+		 padding: 40px 0px
+	 }
+
+	 /* Navigation bar */
+	 .navbar {
+		 display: flex;
+		 flex-direction: row;
+		 align-items: center;
+		 justify-content: space-between;
+		 margin-bottom: 24px;
+		 background-color: green;
+	 }
+	 .navbar a {
+		 color: blue;
+	 }
+
+	 /* Header */
+	 .header {
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+		 margin-bottom: 32px;
+		 background-color: violet;
+	 }
+	 .logo {
+		 color: red;
+		 font-size: 144px;
+	 }
+
+	 /* Main box */
+	 .main-box {
+		 display: flex;
+		 justify-content: space-between;
+
+		 margin: 48px 32px;
+		 box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07)
+	 }
+
+	 .geek-hyena {
+		 width: 320px;
+		 height: 500px;
+	 }
+	 /* Sections */
+	 section {
+		 margin-bottom: 32px;
+	 }
+
+	 .about, .services, .skills, .contact {
+		 display: none;
+	 }
+
+	 .contact {
+		 display: block;
+	 }
+
+	 /* Text content */
+	 h1 {
+		 font-size: 40px;
+		 margin-bottom: 24px;
+	 }
+
+	 p, ol, ul {
+		 margin-left: 40px;
+		 font-size: 18px;
+		 line-height: 1.6;
+	 }
+
+	 /* Contact form */
+	 .contact form textarea {
+		 width: 100%;
+		 height: 250px;
+	 }
+	 .contact-metadata-and-action-box {
+		 display: flex;
+	 }
+	 .contact-metadata-and-action-box #sender-information {
+		 flex: 1 0;
+	 }
+	</style>
+  </head>
+
+  <body>
+	<div class="website-box">
+	  <nav class="navbar">
+		<a>ABOUT HYENATECH</a>
+		<a>SERVICES</a>
+		<a>SKILLS</a>
+		<a>CONTACT</a>
+	  </nav>
+      <header class="header">
+		<span class="logo">Hyenatech</span>
+ 	  </header>
+	  <div class="main-box">
+		<div class="content-box">
+		  <section class="about">
+			<h1>ABOUT HYENATECH</h1>
+			<p>
+		      <p>
+				Hyenatech Ltd. is a software company registered in Israel that provides Research & Development services for tech companies.
+				It was founded by me - Tal Gerbi, a 31 years old geek from Israel - on July 2019.
+			  </p>
+			  <br />
+			  <p>
+				You can think of Hyenatech as my front (both in legal and tax-related terms) for providing R&D services and also for building and shipping my own products.
+			  </p>
+			</p>
+		  </section>
+
+          <section class="services">
+			<h1>SERVICES</h1>
+			<p>
+			  I built many products for tech companies in different industries in the last 5 years. Unfortunately, there's not much to show for it, since it's usually the case that customers prefer to keep the intellectual property for themselves.
+			</p>
+			<p>
+			  I therefore can't show my awesome code, but here is a list of some of the products I built for customers in recent years just so you can get my vibe:
+			  <ol>
+				<li>An infrastructure for executing web scrappers that extract information from social media services (Written in Python)</li>
+				<li>A residential proxy, which prevents businesses web scrappers from getting blocked (Written in Go)</li>
+				<li>An RDP proxy that can log you in automatically to a remote Windows machine (Written in C)</li>
+			  </ol>
+			</p>
+		  </section>
+
+          <section class="skills">
+			<h1>SKILLS</h1>
+			<p>
+			  <ul>
+				<li>BACKEND DEVELOPMENT
+				  <ul>
+					<li>I can build software in any programming language (though I'm mostly proficient with Python, C#, C++ and C)</li>
+					<li>I can build software that is targeted for any platform (Linux, Windows, macOS, Android, iOS or others)</li>
+					<li>I can build software in any scale (That is, it will work even if millions of users are using it daily)</li>
+				  </ul>
+				</li>
+				<li>FRONTEND DEVELOPMENT - I can build websites or apps, so you can operate the software I build even if you are not a computer geek</li>
+				<li>RESEARCH - I can do almost any type of research (including, but not limited to, security-related researches and web-related researches)</li>
+			  </ul>
+			</p>
+
+			<p>
+			  My <a href="https://drive.google.com/file/d/16wcLSFvg21GSKm3y1n9loZ1cPy_axyTr/view">CV</a> is also publically available if you are interested in more details about my skills.
+			</p>
+		  </section>
+
+		  <section class="contact">
+			<h1>CONTACT</h1>
+			<p>
+			  I'm open for new business collaborations. Feel free to write to me at tal@hyenatech.co.il or by using the following form:
+			</p>
+			<form>
+			  <textarea id="content-for-hyenatech"></textarea>
+			  <div class="contact-metadata-and-action-box">
+			    <span>How can I reach you?</span>
+			    <input type="text" id="sender-information" />
+			    <button id="contact-send-btn">Send!</button>
+			  </div>
+			</form>
+		  </section>
+		</div>
+		<aside>
+	      <figure>
+		    <img class="geek-hyena" src="geek-hyena.png" />
+		  </figure>
+		</aside>
+	  </div>
+	  <footer class="copyright-box">
+		Copyright © 2024 Hyenatech Ltd.
+	</div>
+  </body>
+</html>
