@@ -4,11 +4,12 @@
 	<title>Hyenatech Ltd.</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gtatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Integ;wght@100..900&display=swap" rel="stylesheet" />
 	<style>
 		:root {
 			/* GRAYS (from Open Color) */
-			--very-light-gray: #f8f9fa;
+			--very-light-gray: #c8d6e5;/* #f8f9fa; */
 			/* GRAY 0 */
 			--light-gray: #e9ecef;
 			/* GRAY 2 */
@@ -20,7 +21,7 @@
 			/* GRAY 9 */
 
 			/* PRIMARY COLORS: blue shades (from Open Color)  */
-			--very-light-blue: #d0ebff;
+			--very-light-blue: #54a0ff; /*#d0ebff;*/
 			/* BLUE 1 */
 			--light-blue: #74C0fc;
 			/* BLUE 3 */
@@ -47,22 +48,26 @@
 
 		/* Website box */
 		.website-box {
-			width: 1000px;
-			margin: auto;
-			margin-top: 48px;
+			max-width: 1000px;
+			margin: 20px auto;
+			padding: 0px 24px;
 			background-color: var(--very-light-gray);
 
 			display: flex;
 			flex-direction: column;
 			align-items: stretch;
 			justify-items: space-between;
-			gap: 32px;
+			gap: 20px;
 		}
 
 		/* Logo */
 		.logo {
-			font-size: 144px;
-			color: var(--dark-gray);
+			font-size: 120px;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: -3px;
+
+			color: black;
 			text-align: center;
 
 			background-color: var(--very-light-blue);
@@ -72,7 +77,9 @@
 		/* Content box */
 		.content-box {
 			display: grid;
-			gap: 20px;
+			column-gap: 20px;
+			row-gap: 0px;
+			padding: 20px;
 
 			grid-template-columns: 1fr 320px;
 			justify-content: space-between;
@@ -81,28 +88,9 @@
 			background-color: var(--very-light-blue);
 			border-radius: 20px;
 
-			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07)
+			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
 		}
-
-		/* Text box */
-		.text-box {
-			/* Goes first! */
-			grid-row: 1;
-			grid-column: 1;
-		}
-
-		/* Sections */
-		/*.about, .services, .skills, .contact {
-		 display: none;
-	 }*/
-		section {
-			display: none;
-		}
-
-		.skills {
-			display: block;
-		}
-
+		
 		/* Main figure */
 		.geek-hyena {
 			width: 320px;
@@ -111,25 +99,52 @@
 			border-top-right-radius: 20px;
 		}
 
-		/* Text content */
+		/* Main box */
+		.main-box {
+			/* Goes first! */
+			grid-row: 1;
+			grid-column: 1;
+
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		/* Text hierarchy */
+		section > p {
+			padding-left: 40px;
+		}
+		section > ul, section > ol {
+			padding-left: 80px;
+			padding-bottom: 32px;
+		}
+		section > form {
+			padding-left: 60px; /* Not as indented as lists */ 
+			padding-top: 12px; /* Closer than lists */
+		}
+
+		/* Header styles */
 		h1 {
 			font-size: 40px;
-			font-weight: 700;
-			letter-spacing: -1px;
-			margin-left: 30px;
+			font-weight: 900;
+			letter-spacing: -1.5px;
+			color: var(--very-dark-gray);
 		}
 
-		p,
-		ol,
-		ul {
-			margin-left: 40px;
-			font-size: 16px;
-			line-height: 1.6;
-			margin-left: 60px;
+		/* Text styles */
+		p, ol, ul {
+			font-size: 18px;
+			line-height: 1.7;
+			font-weight: 500;
 		}
 
-		p {
-			padding: 10px 0px;
+		/* Sections */
+		section {
+			display: none;
+		}
+
+		.contact {
+			display: block;
 		}
 
 		/* Navigation bar */
@@ -155,6 +170,7 @@
 		.navbar-box a {
 			display: block;
 			font-weight: bold;
+			color: var(--dark-gray);
 		}
 
 		.navbar-box a:link,
@@ -171,9 +187,15 @@
 		.copyright-box {
 			background-color: var(--very-light-blue);
 			border-radius: 10px;
+			font-size: 14px;
 		}
 
 		/* Contact form */
+		.contact form {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
 		.contact form textarea {
 			width: 100%;
 			height: 250px;
@@ -181,6 +203,15 @@
 
 		.contact-metadata-and-action-box {
 			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
+			flex-shrink: 0;
+		}
+
+		.contact-metadata-and-action-box span {
+			font-size: 14px;
+			font-weight: 400;
 		}
 
 		.contact-metadata-and-action-box #sender-information {
@@ -207,7 +238,7 @@
 				<a>CONTACT</a>
 			</nav>
 
-			<div class="text-box">
+			<main class="main-box">
 				<section class="about">
 					<h1>ABOUT HYENATECH</h1>
 					<p>
@@ -286,8 +317,7 @@
 						</div>
 					</form>
 				</section>
-			</div>
-
+			</main>
 		</div>
 
 		<footer class="copyright-box">
