@@ -2,10 +2,10 @@
 
 <head>
 	<title>Hyenatech Ltd.</title>
+	<link rel="icon" type="image/png" href="icon.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gtatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Integ;wght@100..900&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<style>
 		:root {
 			/* https://maketintsandshades.com/#74C0fc */
@@ -36,9 +36,9 @@
 
 		/* Website box */
 		.website-box {
+			margin: 40px auto;
+
 			max-width: 1000px;
-			margin: 20px auto;
-			padding: 0px 24px;
 			background-color: var(--background-color);
 
 			display: flex;
@@ -46,30 +46,41 @@
 			align-items: stretch;
 			justify-items: space-between;
 			gap: 20px;
+
+			/*
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr min-content min-content;
+			gap: 20px;
+			height: 100vh;
+			*/
 		}
 
-		/* Logo */
-		.logo {
-			font-size: 144px;
-			font-weight: 400;
-			font-family: "Permanent Marker", sans-serif;
-			text-transform: uppercase;
-			letter-spacing: -3px;
+		/* Header */
+		.header {
+			padding: 20px 60px;
 
-			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			background-color: var(--components-color);
 			border-radius: 20px;
 		}
 
+		.logo {
+			max-width: 880px;
+		}
+
 		/* Content box */
 		.content-box {
+			padding: 30px 60px;
+
 			display: grid;
 			column-gap: 20px;
 			row-gap: 0px;
-			padding: 20px;
 
-			grid-template-columns: 1fr 320px;
+			grid-template-columns: 1fr 240px;
 			justify-content: space-between;
 			align-items: center;
 
@@ -81,8 +92,7 @@
 		
 		/* Main figure */
 		.geek-hyena {
-			width: 320px;
-			height: 500px;
+			width: 100%;
 
 			border-top-right-radius: 20px;
 		}
@@ -103,11 +113,9 @@
 			padding-bottom: 24px;
 		}
 		section > p {
-			padding-left: 40px;
 			padding-bottom: 20px;
 		}
 		section > ul, section > ol, section > form {
-			padding-left: 80px;
 			padding-bottom: 32px;
 		}
 
@@ -130,7 +138,7 @@
 			display: none;
 		}
 
-		.contact {
+		.skills {
 			display: block;
 		}
 
@@ -172,8 +180,11 @@
 
 		/* Footer */
 		.copyright-box {
+			padding: 0px 60px;
+
 			background-color: var(--components-color);
 			border-radius: 10px;
+
 			font-size: 14px;
 			font-weight: 500;
 		}
@@ -210,7 +221,9 @@
 
 <body>
 	<div class="website-box">
-		<header class="logo">Hyenatech</header>
+		<header class="header">
+			<img class="logo" src="logo.png" />
+		</header>
 
 		<div class="content-box">
 			<aside class="figure-box">
