@@ -6,19 +6,75 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gtatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Integ;wght@100..900&display=swap" rel="stylesheet" />
+	<script
+		src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		crossorigin="anonymous">
+	</script>
+	<script type="text/javascript">
+	<!--
+		function changeSection(sectionName) {
+			$("section").hide();
+			$("." + sectionName).show();
+
+			$(".navbar-item").removeClass("navbar-selected-item");
+			$(".navbar-item-" + sectionName).addClass("navbar-selected-item");
+		}
+
+		function goToPrevSection() {
+			if($(".about").is(":visible")) {
+				prevSection = "contact";
+			}
+			if($(".services").is(":visible")) {
+				prevSection = "about";
+			}
+			if($(".skills").is(":visible")) {
+				prevSection = "services";
+			}
+			if($(".contact").is(":visible")) {
+				prevSection = "skills";
+			}
+
+			changeSection(prevSection);
+		}
+
+		function goToNextSection() {
+			if($(".about").is(":visible")) {
+				nextSection = "services";
+			}
+			if($(".services").is(":visible")) {
+				nextSection = "skills";
+			}
+			if($(".skills").is(":visible")) {
+				nextSection = "contact";
+			}
+			if($(".contact").is(":visible")) {
+				nextSection = "about";
+			}
+
+			changeSection(nextSection);
+		}
+
+		$(document).on('keydown', function(event) {
+			if (event.key == "ArrowLeft") {
+				goToPrevSection(null);
+			}
+			if (event.key == "ArrowRight") {
+				goToNextSection(null);
+			}
+		});
+	-->
+	</script>
 	<style>
 		:root {
-			/* https://maketintsandshades.com/#74C0fc */
-			--background-color: #0c1319;
-			--components-color: #e3f2fe;
-			--text-color: #0c1319;
-			
-
 			/* https://maketintsandshades.com/#476f94 */
 			--background-color: #a3b7ca;
 			--components-color: #0e161e;
 			--text-color: #edf1f4;
-			
+
+			/* https://maketintsandshades.com/#ff69b4*/
+			--secondary-color-light: #ffd2e9;
+			--secondary-color-dark: #ff69b4;
 		}
 
 		/* Global reset */
@@ -34,9 +90,22 @@
 			background-color: var(--background-color);
 		}
 
+		/* Links */
+		a:link,
+		a:visited {
+			color: var(--secondary-color-dark);
+			text-decoration: none;
+		}
+
+		a:hover,
+		a:active {
+			color: var(--secondary-color-light);
+			text-decoration: none;
+		}
+
 		/* Website box */
 		.website-box {
-			margin: 40px auto;
+			margin: 20px auto;
 
 			max-width: 1000px;
 			background-color: var(--background-color);
@@ -46,19 +115,11 @@
 			align-items: stretch;
 			justify-items: space-between;
 			gap: 20px;
-
-			/*
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr min-content min-content;
-			gap: 20px;
-			height: 100vh;
-			*/
 		}
 
 		/* Header */
 		.header {
-			padding: 20px 60px;
+			padding: 10px 60px;
 
 			display: flex;
 			justify-content: center;
@@ -68,13 +129,12 @@
 			border-radius: 20px;
 		}
 
-		.logo {
-			max-width: 880px;
-		}
-
 		/* Content box */
 		.content-box {
-			padding: 30px 60px;
+			padding: 20px 60px;
+			position: relative;
+
+			height: 520px;
 
 			display: grid;
 			column-gap: 20px;
@@ -88,6 +148,44 @@
 			border-radius: 20px;
 
 			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
+		}
+
+		/* Carousel arrows */
+		.arrow-button {
+			height: 50px;
+			width: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background-color: var(--text-color);
+			border: 0px;
+			border-radius: 50%;
+		}
+
+		.arrow-button:hover {
+			cursor: pointer;
+		}
+
+		.arrow-left-container {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+		}
+
+		.arrow-right-container {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(50%, -50%)
+		}
+
+		.arrow-svg {
+			height: 24px;
+			width: 24px;
+			stroke: var(--components-color);
+			color: var(--components-color);
 		}
 		
 		/* Main figure */
@@ -110,17 +208,24 @@
 
 		/* Text hierarchy */
 		section > h1 {
-			padding-bottom: 24px;
+			padding-bottom: 16px;
 		}
 		section > p {
-			padding-bottom: 20px;
+			padding-bottom: 16px;
+		}
+		section > p.small-bottom-padding {
+			padding-bottom: 5px;
 		}
 		section > ul, section > ol, section > form {
-			padding-bottom: 32px;
+			padding-bottom: 16px;
+		}
+		section > ul > li {
+			padding-bottom: 20px;
 		}
 
 		/* Header styles */
 		h1 {
+			text-transform: uppercase;
 			font-size: 40px;
 			font-weight: 900;
 			letter-spacing: -1.5px;
@@ -128,7 +233,7 @@
 
 		/* Text styles */
 		p, ol, ul {
-			font-size: 18px;
+			font-size: 16px;
 			line-height: 1.7;
 			font-weight: 500;
 		}
@@ -138,7 +243,7 @@
 			display: none;
 		}
 
-		.skills {
+		.about {
 			display: block;
 		}
 
@@ -149,38 +254,36 @@
 
 			display: flex;
 			flex-direction: row;
-			height: 30px;
-			gap: 20px;
+			gap: 5.5px;
 
 			align-items: center;
-			justify-content: space-around;
-
-
-			background-color: var(--components-color);
-			border-bottom-left-radius: 10px;
-			border-bottom-right-radius: 10px;
-		}
-
-		/* Navigation links */
-		.navbar-box a {
-			display: block;
-			font-weight: bold;
+			justify-content: center;
 			
+			background-color: var(--components-color);
 		}
 
-		.navbar-box a:link,
-		.navbar-box a:visited {
-			color: red;
+		.navbar-item {
+			display: block;
+
+			width: 11px;
+			height: 11px;
+			background-color: var(--text-color);
+			border-radius: 50%;
 		}
 
-		.navbar-box a:hover,
-		.navbar-box a:active {
-			color: violet;
+		.navbar-item:hover {
+			background-color: var(--secondary-color-light);
+			cursor: pointer;
+		}
+
+		.navbar-selected-item, .navbar-selected-item:hover  {
+			background-color: var(--secondary-color-dark);
+			cursor: auto;
 		}
 
 		/* Footer */
 		.copyright-box {
-			padding: 0px 60px;
+			padding: 5px 60px;
 
 			background-color: var(--components-color);
 			border-radius: 10px;
@@ -220,12 +323,24 @@
 </head>
 
 <body>
-	<div class="website-box">
+	<div class="website-box">  
 		<header class="header">
 			<img class="logo" src="logo.png" />
 		</header>
 
 		<div class="content-box">
+			<button onclick="goToPrevSection()" class="arrow-button arrow-left-container">
+				<svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+					<path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
+				</svg>	  
+			</button>
+
+			<button onclick="goToNextSection()" class="arrow-button arrow-right-container">
+				<svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+					<path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+				</svg>  
+			</button>
+
 			<aside class="figure-box">
 				<figure>
 					<img class="geek-hyena" src="geek-hyena.png" />
@@ -233,15 +348,15 @@
 			</aside>
 
 			<nav class="navbar-box">
-				<a>ABOUT HYENATECH</a>
-				<a>SERVICES</a>
-				<a>SKILLS</a>
-				<a>CONTACT</a>
+				<a onclick="changeSection('about')", class="navbar-item navbar-item-about navbar-selected-item"></a>
+				<a onclick="changeSection('services')" class="navbar-item navbar-item-services"></a>
+				<a onclick="changeScetion('skills')" class="navbar-item navbar-item-skills"></a>
+				<a onclick="changeSection('contact')" class="navbar-item navbar-item-contact"></a>
 			</nav>
 
 			<main class="main-box">
 				<section class="about">
-					<h1>ABOUT HYENATECH</h1>
+					<h1>About Hyenatech</h1>
 					<p>
 						Hyenatech Ltd. is a software company registered in Israel that provides Research & Development
 						services for tech companies.
@@ -254,7 +369,7 @@
 				</section>
 
 				<section class="services">
-					<h1>SERVICES</h1>
+					<h1>Services</h1>
 					<p>
 						I built many products in recent years. Unfortunately I can't
 						share their awesome code (since I do not own the
@@ -273,32 +388,45 @@
 				</section>
 
 				<section class="skills">
-					<h1>SKILLS</h1>	
-					<p>
+					<h1>Skills</h1>	
+					<p class="small-bottom-padding">
 						I can build:
 					</p>
 					<ul>
-						<li>ANY PIECE OF SOFTWARE:
+						<li>ANY PIECE OF SOFTWARE
 							<ul>
-								<li>In any programming language (though I'm mostly proficient with
-									Python, Go, C++ and C)</li>
+								<li>In any programming language
+									<ul><li>
+										I'm mostly proficient with Python, Go, C++ and C
+									</li></ul>
 								<li>Targeted for any platform</li>
 								<li>In any scale</li>
 							</ul>
 						</li>
-						<li>WEBSITE OR APPS - so you can operate the software I build
-							even if you are not a computer geek</li>
-						<li>PROOF OF CONCEPTS - I'm very technical so I can do almost any type of research</li>
+						<li>WEBSITE OR APPS
+							<ul>
+								<li>
+									so you can operate the software I build
+									even if you are not a computer geek
+								</li>
+							</ul>
+						<li>PROOF OF CONCEPTS
+							<ul>
+								<li>
+									I'm very technical so I can do almost any type of research
+								</li>
+							</ul>
+						</li>
 					</ul>
 					<p>
-						There are also more details on my <a href="https://drive.google.com/file/d/16wcLSFvg21GSKm3y1n9loZ1cPy_axyTr/view">CV</a>.
+						You can find more technical details on my <a target="_blank" href="https://drive.google.com/file/d/16wcLSFvg21GSKm3y1n9loZ1cPy_axyTr/view">CV</a>.
 					</p>
 				</section>
 
 				<section class="contact">
-					<h1>CONTACT</h1>
+					<h1>Contact</h1>
 					<p>
-						I'm open for new business collaborations. Feel free to write to me at tal@hyenatech.co.il or by
+						I'm open for new business collaborations. Feel free to write to me at <a href="mailto:tal@hyenatech.co.il">tal@hyenatech.co.il</a> or by
 						using the following form:
 					</p>
 					<form>
