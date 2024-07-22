@@ -6,6 +6,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gtatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Integ;wght@100..900&display=swap" rel="stylesheet" />
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script
 		src="https://code.jquery.com/jquery-3.7.1.min.js"
 		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -101,6 +103,25 @@
 		a:active {
 			color: var(--secondary-color-light);
 			text-decoration: none;
+		}
+
+		/* List styles */
+		ul, ol {
+			list-style: none;
+		}
+
+		li {
+			position: relative
+		}
+
+		/* Icons */
+		ion-icon {
+			position: absolute;
+			top: 3;
+			left: -30;
+
+			height: 20px;
+			width: 20px;
 		}
 
 		/* Website box */
@@ -374,13 +395,22 @@
 						but here are some examples for products I built:
 					</p>
 					<ol>
-						<li>An infrastructure for executing web scrappers that
-							extract information from social media services (Written
-							in Python)</li>
-						<li>A residential proxy, which prevents businesses web
-							scrappers from getting blocked (Written in Go)</li>
-						<li>An RDP proxy that can log you in automatically to a
-							remote Windows machine (Written in C)</li>
+						<li>
+							<ion-icon name="logo-facebook" style="color: #0080FF; background-color: var(--text-color); border-radius: 50%;"></ion-icon>
+							An infrastructure for executing web scrappers that
+							extract information from social media services
+							(Written in Python)
+						</li>
+						<li>
+							<ion-icon name="lock-open" style="color: #fdda3f;"></ion-icon>
+							A residential proxy, which prevents businesses web
+							scrappers from getting blocked (Written in Go)
+						</li>
+						<li>
+							<ion-icon name="logo-windows" style="color: #0177db;"></ion-icon>
+							An RDP proxy that can log you in automatically to a
+							remote Windows machine (Written in C)
+						</li>
 					</ol>
 				</section>
 
@@ -390,24 +420,40 @@
 						I can build:
 					</p>
 					<ul>
-						<li>ANY PIECE OF SOFTWARE
+						<li>
+							<ion-icon name="terminal" style="color: white;"></ion-icon>
+							ANY PIECE OF SOFTWARE
 							<ul>
-								<li>In any programming language
+								<li>
+									<ion-icon name="logo-python" style="color: white;"></ion-icon>
+									In any programming language
 									<ul><li>
 										I'm mostly proficient with Python, Go, C++ and C
 									</li></ul>
-								<li>Targeted for any platform</li>
-								<li>In any scale</li>
+								</li>
+								<li>
+									<ion-icon name="logo-tux" style="background-color: white; color: var(--components-color); border-radius: 50%;"></ion-icon>
+									Targeted for any platform
+								</li>
+								<li>
+									<ion-icon name="trending-up" style="color: var(--text-color)"></ion-icon>
+									In any scale
+								</li>
 							</ul>
 						</li>
-						<li>WEBSITE OR APPS
+						<li>
+							<ion-icon name="eye" style="color: #62c1e5;"></ion-icon>
+							WEBSITE OR APPS
 							<ul>
 								<li>
 									so you can operate the software I build
 									even if you are not a computer geek
 								</li>
 							</ul>
-						<li>PROOF OF CONCEPTS
+						</li>
+						<li>
+							<ion-icon name="bulb" style="color: #fdfd66"></ion-icon>
+							PROOF OF CONCEPTS
 							<ul>
 								<li>
 									I'm very technical so I can do almost any type of research
