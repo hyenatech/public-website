@@ -1,8 +1,7 @@
 <html>
 
-<head>
+  <head>
 	<title>Hyenatech Ltd.</title>
-
 	<!-- Icon -->
 	<link rel="icon" type="image/png" href="icon.png" />
 
@@ -13,495 +12,495 @@
 
 	<!-- JQuery -->
 	<script
-		src="https://code.jquery.com/jquery-3.7.1.min.js"
-		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-		crossorigin="anonymous">
+	  src="https://code.jquery.com/jquery-3.7.1.min.js"
+		   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		   crossorigin="anonymous">
 	</script>
 
 	<!-- Scripts -->
 	<script type="text/javascript">
-	<!--
-		function changeSection(sectionName) {
-			$("section").hide();
-			$("." + sectionName).show();
+	 <!--
+								   function changeSection(sectionName) {
+									   $("section").hide();
+									   $("." + sectionName).show();
 
-			$(".navbar-item").removeClass("navbar-selected-item");
-			$(".navbar-item-" + sectionName).addClass("navbar-selected-item");
-		}
+									   $(".navbar-item").removeClass("navbar-selected-item");
+									   $(".navbar-item-" + sectionName).addClass("navbar-selected-item");
+								   }
 
-		function goToPrevSection() {
-			if($(".about").is(":visible")) {
-				prevSection = "contact";
-			}
-			if($(".services").is(":visible")) {
-				prevSection = "about";
-			}
-			if($(".skills").is(":visible")) {
-				prevSection = "services";
-			}
-			if($(".contact").is(":visible")) {
-				prevSection = "skills";
-			}
+	 function goToPrevSection() {
+		 if($(".about").is(":visible")) {
+			 prevSection = "contact";
+		 }
+		 if($(".services").is(":visible")) {
+			 prevSection = "about";
+		 }
+		 if($(".skills").is(":visible")) {
+			 prevSection = "services";
+		 }
+		 if($(".contact").is(":visible")) {
+			 prevSection = "skills";
+		 }
 
-			changeSection(prevSection);
-		}
+		 changeSection(prevSection);
+	 }
 
-		function goToNextSection() {
-			if($(".about").is(":visible")) {
-				nextSection = "services";
-			}
-			if($(".services").is(":visible")) {
-				nextSection = "skills";
-			}
-			if($(".skills").is(":visible")) {
-				nextSection = "contact";
-			}
-			if($(".contact").is(":visible")) {
-				nextSection = "about";
-			}
+	 function goToNextSection() {
+		 if($(".about").is(":visible")) {
+			 nextSection = "services";
+		 }
+		 if($(".services").is(":visible")) {
+			 nextSection = "skills";
+		 }
+		 if($(".skills").is(":visible")) {
+			 nextSection = "contact";
+		 }
+		 if($(".contact").is(":visible")) {
+			 nextSection = "about";
+		 }
 
-			changeSection(nextSection);
-		}
+		 changeSection(nextSection);
+	 }
 
-		$(document).on('keydown', function(event) {
-			if (event.key == "ArrowLeft") {
-				goToPrevSection(null);
-			}
-			if (event.key == "ArrowRight") {
-				goToNextSection(null);
-			}
-		});
-	-->
+	 $(document).on('keydown', function(event) {
+		 if (event.key == "ArrowLeft") {
+			 goToPrevSection(null);
+		 }
+		 if (event.key == "ArrowRight") {
+			 goToNextSection(null);
+		 }
+	 });
+	 -->
 	</script>
 
 	<!-- Styles -->
 	<style>
-		:root {
-			/* https://maketintsandshades.com/#476f94 */
-			--background-color: #a3b7ca;
-			--components-color: #0e161e;
-			--text-color: #edf1f4;
+	 :root {
+		 /* https://maketintsandshades.com/#476f94 */
+		 --background-color: #a3b7ca;
+		 --components-color: #0e161e;
+		 --text-color: #edf1f4;
 
-			/* https://maketintsandshades.com/#ff69b4*/
-			--secondary-color-light: #ffd2e9;
-			--secondary-color-dark: #ff69b4;
-		}
+		 /* https://maketintsandshades.com/#ff69b4*/
+		 --secondary-color-light: #ffd2e9;
+		 --secondary-color-dark: #ff69b4;
+	 }
 
-		/* Global reset */
-		* {
-			margin: 0;
-			box-sizing: border-box;
-		}
+	 /* Global reset */
+	 * {
+		 margin: 0;
+		 box-sizing: border-box;
+	 }
 
-		/* Set font */
-		body {
-			font-family: "Inter", sans-serif;
-			color: var(--text-color);
-			background-color: var(--background-color);
-		}
+	 /* Set font */
+	 body {
+		 font-family: "Inter", sans-serif;
+		 color: var(--text-color);
+		 background-color: var(--background-color);
+	 }
 
-		/* Links */
-		a:link,
-		a:visited {
-			color: var(--secondary-color-dark);
-			text-decoration: none;
-		}
+	 /* Links */
+	 a:link,
+	 a:visited {
+		 color: var(--secondary-color-dark);
+		 text-decoration: none;
+	 }
 
-		a:hover,
-		a:active {
-			color: var(--secondary-color-light);
-			text-decoration: none;
-		}
+	 a:hover,
+	 a:active {
+		 color: var(--secondary-color-light);
+		 text-decoration: none;
+	 }
 
-		/* List styles */
-		ul, ol {
-			list-style: none;
-		}
+	 /* List styles */
+	 ul, ol {
+		 list-style: none;
+	 }
 
-		li {
-			position: relative
-		}
+	 li {
+		 position: relative
+	 }
 
-		/* Icons */
-		ion-icon {
-			position: absolute;
-			top: 3;
-			left: -26;
+	 /* Icons */
+	 ion-icon {
+		 position: absolute;
+		 top: 3;
+		 left: -26;
 
-			height: 20px;
-			width: 20px;
-		}
+		 height: 20px;
+		 width: 20px;
+	 }
 
-		/* Website box */
-		.website-box {
-			margin: 20px auto;
+	 /* Website box */
+	 .website-box {
+		 margin: 20px auto;
 
-			max-width: 1000px;
-			background-color: var(--background-color);
+		 max-width: 1000px;
+		 background-color: var(--background-color);
 
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-			justify-items: space-between;
-			gap: 20px;
-		}
+		 display: flex;
+		 flex-direction: column;
+		 align-items: stretch;
+		 justify-items: space-between;
+		 gap: 20px;
+	 }
 
-		/* Header */
-		.header {
-			padding: 10px 60px;
+	 /* Header */
+	 .header {
+		 padding: 10px 60px;
 
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
 
-			background-color: var(--components-color);
-			border-radius: 20px;
-		}
+		 background-color: var(--components-color);
+		 border-radius: 20px;
+	 }
 
-		/* Content box */
-		.content-box {
-			padding: 20px 60px;
-			position: relative;
+	 /* Content box */
+	 .content-box {
+		 padding: 20px 60px;
+		 position: relative;
 
-			display: grid;
-			column-gap: 20px;
-			row-gap: 0px;
+		 display: grid;
+		 column-gap: 20px;
+		 row-gap: 0px;
 
-			grid-template-columns: 1fr 240px;
-			justify-content: space-between;
-			align-items: center;
+		 grid-template-columns: 1fr 240px;
+		 justify-content: space-between;
+		 align-items: center;
 
-			background-color: var(--components-color);
-			border-radius: 20px;
+		 background-color: var(--components-color);
+		 border-radius: 20px;
 
-			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
-		}
+		 box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
+	 }
 
-		/* Carousel arrows */
-		.arrow-button {
-			height: 50px;
-			width: 50px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	 /* Carousel arrows */
+	 .arrow-button {
+		 height: 50px;
+		 width: 50px;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
 
-			background-color: var(--text-color);
-			border: 0px;
-			border-radius: 50%;
-		}
+		 background-color: var(--text-color);
+		 border: 0px;
+		 border-radius: 50%;
+	 }
 
-		.arrow-button:hover {
-			cursor: pointer;
-		}
+	 .arrow-button:hover {
+		 cursor: pointer;
+	 }
 
-		.arrow-left-container {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translate(-50%, -50%);
-		}
+	 .arrow-left-container {
+		 position: absolute;
+		 top: 50%;
+		 left: 0;
+		 transform: translate(-50%, -50%);
+	 }
 
-		.arrow-right-container {
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translate(50%, -50%)
-		}
+	 .arrow-right-container {
+		 position: absolute;
+		 top: 50%;
+		 right: 0;
+		 transform: translate(50%, -50%)
+	 }
 
-		.arrow-svg {
-			height: 24px;
-			width: 24px;
-			stroke: var(--components-color);
-			color: var(--components-color);
-		}
-		
-		/* Main figure */
-		.geek-hyena {
-			width: 100%;
+	 .arrow-svg {
+		 height: 24px;
+		 width: 24px;
+		 stroke: var(--components-color);
+		 color: var(--components-color);
+	 }
 
-			border-top-right-radius: 20px;
-		}
+	 /* Main figure */
+	 .geek-hyena {
+		 width: 100%;
 
-		/* Main box */
-		.main-box {
-			/* Goes first! */
-			grid-row: 1;
-			grid-column: 1;
+		 border-top-right-radius: 20px;
+	 }
 
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-		}
+	 /* Main box */
+	 .main-box {
+		 /* Goes first! */
+		 grid-row: 1;
+		 grid-column: 1;
 
-		/* Text hierarchy */
-		section > h1 {
-			padding-bottom: 16px;
-		}
-		section > p {
-			padding-bottom: 16px;
-		}
-		section > p.small-bottom-padding {
-			padding-bottom: 5px;
-		}
-		section > ul, section > form {
-			padding-bottom: 16px;
-		}
-		section > ul > li {
-			padding-bottom: 20px;
-		}
-		section > ol > li {
-			padding-bottom: 12px;
-		}
+		 display: flex;
+		 flex-direction: column;
+		 align-items: stretch;
+	 }
 
-		/* Header styles */
-		h1 {
-			text-transform: uppercase;
-			font-size: 40px;
-			font-weight: 900;
-			letter-spacing: -1.5px;
-		}
+	 /* Text hierarchy */
+	 section > h1 {
+		 padding-bottom: 16px;
+	 }
+	 section > p {
+		 padding-bottom: 16px;
+	 }
+	 section > p.small-bottom-padding {
+		 padding-bottom: 5px;
+	 }
+	 section > ul, section > form {
+		 padding-bottom: 16px;
+	 }
+	 section > ul > li {
+		 padding-bottom: 20px;
+	 }
+	 section > ol > li {
+		 padding-bottom: 12px;
+	 }
 
-		/* Text styles */
-		p, ol, ul {
-			font-size: 16px;
-			line-height: 1.7;
-			font-weight: 500;
-		}
+	 /* Header styles */
+	 h1 {
+		 text-transform: uppercase;
+		 font-size: 40px;
+		 font-weight: 900;
+		 letter-spacing: -1.5px;
+	 }
 
-		/* Sections */
-		section {
-			display: none;
-		}
+	 /* Text styles */
+	 p, ol, ul {
+		 font-size: 16px;
+		 line-height: 1.7;
+		 font-weight: 500;
+	 }
 
-		.about {
-			display: block;
-		}
+	 /* Sections */
+	 section {
+		 display: none;
+	 }
 
-		/* Navigation bar */
-		.navbar-box {
-			grid-row: 2;
-			grid-column: 1 / -1;
+	 .about {
+		 display: block;
+	 }
 
-			display: flex;
-			flex-direction: row;
-			gap: 5.5px;
+	 /* Navigation bar */
+	 .navbar-box {
+		 grid-row: 2;
+		 grid-column: 1 / -1;
 
-			align-items: center;
-			justify-content: center;
-			
-			background-color: var(--components-color);
-		}
+		 display: flex;
+		 flex-direction: row;
+		 gap: 5.5px;
 
-		.navbar-item {
-			display: block;
+		 align-items: center;
+		 justify-content: center;
 
-			width: 11px;
-			height: 11px;
-			background-color: var(--text-color);
-			border-radius: 50%;
-		}
+		 background-color: var(--components-color);
+	 }
 
-		.navbar-item:hover {
-			background-color: var(--secondary-color-light);
-			cursor: pointer;
-		}
+	 .navbar-item {
+		 display: block;
 
-		.navbar-selected-item, .navbar-selected-item:hover  {
-			background-color: var(--secondary-color-dark);
-			cursor: auto;
-		}
+		 width: 11px;
+		 height: 11px;
+		 background-color: var(--text-color);
+		 border-radius: 50%;
+	 }
 
-		/* Footer */
-		.copyright-box {
-			padding: 5px 60px;
+	 .navbar-item:hover {
+		 background-color: var(--secondary-color-light);
+		 cursor: pointer;
+	 }
 
-			background-color: var(--components-color);
-			border-radius: 10px;
+	 .navbar-selected-item, .navbar-selected-item:hover  {
+		 background-color: var(--secondary-color-dark);
+		 cursor: auto;
+	 }
 
-			font-size: 14px;
-			font-weight: 500;
-		}
+	 /* Footer */
+	 .copyright-box {
+		 padding: 5px 60px;
 
-		/* Contact form */
-		.contact form {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-		}
-		.contact form textarea {
-			width: 100%;
-			height: 250px;
-		}
+		 background-color: var(--components-color);
+		 border-radius: 10px;
 
-		.contact-metadata-and-action-box {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: 10px;
-			flex-shrink: 0;
-		}
+		 font-size: 14px;
+		 font-weight: 500;
+	 }
 
-		.contact-metadata-and-action-box span {
-			font-size: 14px;
-			font-weight: 400;
-		}
+	 /* Contact form */
+	 .contact form {
+		 display: flex;
+		 flex-direction: column;
+		 gap: 10px;
+	 }
+	 .contact form textarea {
+		 width: 100%;
+		 height: 250px;
+	 }
 
-		.contact-metadata-and-action-box #sender-information {
-			flex: 1 0;
-		}
+	 .contact-metadata-and-action-box {
+		 display: flex;
+		 justify-content: space-between;
+		 align-items: center;
+		 gap: 10px;
+		 flex-shrink: 0;
+	 }
+
+	 .contact-metadata-and-action-box span {
+		 font-size: 14px;
+		 font-weight: 400;
+	 }
+
+	 .contact-metadata-and-action-box #sender-information {
+		 flex: 1 0;
+	 }
 	</style>
-</head>
+  </head>
 
-<body>
-	<div class="website-box">  
-		<header class="header">
-			<img class="logo" src="logo.png" />
-		</header>
+  <body>
+	<div class="website-box">
+	  <header class="header">
+		<img class="logo" src="logo.png" />
+	  </header>
 
-		<div class="content-box">
-			<button onclick="goToPrevSection()" class="arrow-button arrow-left-container">
-				<svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-					<path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
-				</svg>	  
-			</button>
+	  <div class="content-box">
+		<button onclick="goToPrevSection()" class="arrow-button arrow-left-container">
+		  <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+			<path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />
+		  </svg>
+		</button>
 
-			<button onclick="goToNextSection()" class="arrow-button arrow-right-container">
-				<svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-					<path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-				</svg>  
-			</button>
+		<button onclick="goToNextSection()" class="arrow-button arrow-right-container">
+		  <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+			<path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
+		  </svg>
+		</button>
 
-			<aside class="figure-box">
-				<figure>
-					<img class="geek-hyena" src="geek-hyena.png" />
-				</figure>
-			</aside>
+		<aside class="figure-box">
+		  <figure>
+			<img class="geek-hyena" src="geek-hyena.png" />
+		  </figure>
+		</aside>
 
-			<nav class="navbar-box">
-				<a onclick="changeSection('about')", class="navbar-item navbar-item-about navbar-selected-item"></a>
-				<a onclick="changeSection('services')" class="navbar-item navbar-item-services"></a>
-				<a onclick="changeSection('skills')" class="navbar-item navbar-item-skills"></a>
-				<a onclick="changeSection('contact')" class="navbar-item navbar-item-contact"></a>
-			</nav>
+		<nav class="navbar-box">
+		  <a onclick="changeSection('about')", class="navbar-item navbar-item-about navbar-selected-item"></a>
+		  <a onclick="changeSection('services')" class="navbar-item navbar-item-services"></a>
+		  <a onclick="changeSection('skills')" class="navbar-item navbar-item-skills"></a>
+		  <a onclick="changeSection('contact')" class="navbar-item navbar-item-contact"></a>
+		</nav>
 
-			<main class="main-box">
-				<section class="about">
-					<h1>About Hyenatech</h1>
-					<p>
-						Hyenatech Ltd. is a software company registered in Israel that provides Research & Development
-						services for tech companies.
-						It was founded by me - Tal Gerbi, a 31 years old geek from Israel - on July 2019.
-					</p>
-					<p>
-						You can therefore think of Hyenatech as my front (both in legal and tax-related terms) for providing R&D
-						services and also for building and shipping my own products.
-					</p>
-				</section>
+		<main class="main-box">
+		  <section class="about">
+			<h1>About Hyenatech</h1>
+			<p>
+			  Hyenatech Ltd. is a software company registered in Israel that provides Research & Development
+			  services for tech companies.
+			  It was founded by me - Tal Gerbi, a 31 years old geek from Israel - on July 2019.
+			</p>
+			<p>
+			  You can therefore think of Hyenatech as my front (both in legal and tax-related terms) for providing R&D
+			  services and also for building and shipping my own products.
+			</p>
+		  </section>
 
-				<section class="services">
-					<h1>Services</h1>
-					<p>
-						I built many products in recent years. Unfortunately I can't
-						share their awesome code (since I do not own the IP),
-						but here are some examples for products I built:
-					</p>
-					<ol>
-						<li>
-							<ion-icon name="logo-facebook" style="color: #0080FF; background-color: var(--text-color); border-radius: 50%;"></ion-icon>
-							An infrastructure for executing web scrappers that
-							extract information from social media services
-							(Written in Python)
-						</li>
-						<li>
-							<ion-icon name="lock-open" style="color: #fdda3f;"></ion-icon>
-							A residential proxy, which prevents businesses web
-							scrappers from getting blocked (Written in Go)
-						</li>
-						<li>
-							<ion-icon name="logo-windows" style="color: #0177db;"></ion-icon>
-							An RDP proxy that can log you in automatically to a
-							remote Windows machine (Written in C)
-						</li>
-					</ol>
-				</section>
+		  <section class="services">
+			<h1>Services</h1>
+			<p>
+			  I built many products in recent years. Unfortunately I can't
+			  share their awesome code (since I do not own the IP),
+			  but here are some examples for products I built:
+			</p>
+			<ol>
+			  <li>
+				<ion-icon name="logo-facebook" style="color: #0080FF; background-color: var(--text-color); border-radius: 50%;"></ion-icon>
+				An infrastructure for executing web scrappers that
+				extract information from social media services
+				(Written in Python)
+			  </li>
+			  <li>
+				<ion-icon name="lock-open" style="color: #fdda3f;"></ion-icon>
+				A residential proxy, which prevents businesses web
+				scrappers from getting blocked (Written in Go)
+			  </li>
+			  <li>
+				<ion-icon name="logo-windows" style="color: #0177db;"></ion-icon>
+				An RDP proxy that can log you in automatically to a
+				remote Windows machine (Written in C)
+			  </li>
+			</ol>
+		  </section>
 
-				<section class="skills">
-					<h1>Skills</h1>	
-					<p class="small-bottom-padding">
-						I can build:
-					</p>
-					<ul>
-						<li>
-							<ion-icon name="terminal" style="color: #9edbc5;"></ion-icon>
-							ANY PIECE OF SOFTWARE
-							<ul>
-								<li>
-									<ion-icon name="logo-python" style="color: #9edbc5;"></ion-icon>
-									In any programming language
-								</li>
-								<li>
-									<ion-icon name="game-controller" style="color: #9edbc5;"></ion-icon>
-									Targeted for any platform
-								</li>
-								<li>
-									<ion-icon name="trending-up" style="color: #9edbc5;"></ion-icon>
-									In any scale
-								</li>
-							</ul>
-						</li>
-						<li>
-							<ion-icon name="eye" style="color: #62c1e5;"></ion-icon>
-							WEBSITE OR APPS
-							<ul>
-								<li>
-									<ion-icon name="share-social" style="color: #62c1e5;"></ion-icon>
-									So you can operate the software I build
-									even if you are not a computer geek
-								</li>
-							</ul>
-						</li>
-						<li>
-							<ion-icon name="bulb" style="color: #fdfd66;"></ion-icon>
-							PROOF OF CONCEPTS
-							<ul>
-								<li>
-									<ion-icon name="flask" style="color: #fdfd66;"></ion-icon>
-									I'm very technical so I can do almost any type of research
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<p>
-						You can find more technical details on my <a target="_blank" href="https://drive.google.com/file/d/16wcLSFvg21GSKm3y1n9loZ1cPy_axyTr/view">CV</a>.
-					</p>
-				</section>
+		  <section class="skills">
+			<h1>Skills</h1>
+			<p class="small-bottom-padding">
+			  I can build:
+			</p>
+			<ul>
+			  <li>
+				<ion-icon name="terminal" style="color: #9edbc5;"></ion-icon>
+				ANY PIECE OF SOFTWARE
+				<ul>
+				  <li>
+					<ion-icon name="logo-python" style="color: #9edbc5;"></ion-icon>
+					In any programming language
+				  </li>
+				  <li>
+					<ion-icon name="game-controller" style="color: #9edbc5;"></ion-icon>
+					Targeted for any platform
+				  </li>
+				  <li>
+					<ion-icon name="trending-up" style="color: #9edbc5;"></ion-icon>
+					In any scale
+				  </li>
+				</ul>
+			  </li>
+			  <li>
+				<ion-icon name="eye" style="color: #62c1e5;"></ion-icon>
+				WEBSITE OR APPS
+				<ul>
+				  <li>
+					<ion-icon name="share-social" style="color: #62c1e5;"></ion-icon>
+					So you can operate the software I build
+					even if you are not a computer geek
+				  </li>
+				</ul>
+			  </li>
+			  <li>
+				<ion-icon name="bulb" style="color: #fdfd66;"></ion-icon>
+				PROOF OF CONCEPTS
+				<ul>
+				  <li>
+					<ion-icon name="flask" style="color: #fdfd66;"></ion-icon>
+					I'm very technical so I can do almost any type of research
+				  </li>
+				</ul>
+			  </li>
+			</ul>
+			<p>
+			  You can find more technical details on my <a target="_blank" href="https://drive.google.com/file/d/16wcLSFvg21GSKm3y1n9loZ1cPy_axyTr/view">CV</a>.
+			</p>
+		  </section>
 
-				<section class="contact">
-					<h1>Contact</h1>
-					<p>
-						I'm open for new business collaborations. Feel free to write to me at <a href="mailto:tal@hyenatech.co.il">tal@hyenatech.co.il</a> or by
-						using the following form:
-					</p>
-					<form onsubmit="return false;">
-						<textarea id="content-for-hyenatech"></textarea>
-						<div class="contact-metadata-and-action-box">
-							<span>How can I reach you?</span>
-							<input type="text" id="sender-information" />
-							<button id="contact-send-btn">Send!</button>
-						</div>
-					</form>
-				</section>
-			</main>
-		</div>
+		  <section class="contact">
+			<h1>Contact</h1>
+			<p>
+			  I'm open for new business collaborations. Feel free to write to me at <a href="mailto:tal@hyenatech.co.il">tal@hyenatech.co.il</a> or by
+			  using the following form:
+			</p>
+			<form onsubmit="return false;">
+			  <textarea id="content-for-hyenatech"></textarea>
+			  <div class="contact-metadata-and-action-box">
+				<span>How can I reach you?</span>
+				<input type="text" id="sender-information" />
+				<button id="contact-send-btn">Send!</button>
+			  </div>
+			</form>
+		  </section>
+		</main>
+	  </div>
 
-		<footer class="copyright-box">
-			Copyright © 2024 Hyenatech Ltd.
-		</footer>
+	  <footer class="copyright-box">
+		Copyright © 2024 Hyenatech Ltd.
+	  </footer>
 	</div>
 
 	<!-- Icons -->
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+  </body>
 
 </html>
